@@ -1,0 +1,14 @@
+[Unit]
+Description=Prometheus exporter for ejabberd metrics
+After=ejabberd.service network.target
+Requires=ejabberd.service
+
+[Service]
+Type=simple
+User=ejabberd
+Group=ejabberd
+EnvironmentFile=/etc/default/ejabberd-exporter
+ExecStart=/usr/bin/ejabberd-exporter --address ${ADDRESS} --port ${PORT}
+
+[Install]
+WantedBy=multi-user.target

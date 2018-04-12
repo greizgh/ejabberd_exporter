@@ -1,0 +1,24 @@
+[package]
+name = "ejabberd-exporter"
+description = "Prometheus exporter for ejabberd"
+version = "0.2.0"
+authors = ["Greizgh <greizgh@ephax.org>"]
+license = "MIT"
+
+[dependencies]
+actix = "0.5"
+actix-web = "0.5"
+clap = "2.31.2"
+env_logger = "0.5.9"
+failure = "0.1.1"
+log = "0.4.1"
+rayon = "1.0.1"
+
+[package.metadata.deb]
+depends = "$auto, systemd, ejabberd"
+section = "net"
+assets = [
+  ["target/release/ejabberd-exporter", "usr/bin/", "755"],
+  ["resources/ejabberd-exporter.service", "usr/lib/systemd/system/", "644"],
+  ["resources/ejabberd-exporter", "etc/default/", "644"],
+]

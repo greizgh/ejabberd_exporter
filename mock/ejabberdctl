@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+
+arg="$1"
+
+case $1 in
+  connected_users_number)
+    sleep 1.12
+    echo 3
+    ;;
+  incoming_s2s_number)
+    sleep 1.28
+    echo 2
+    ;;
+  mnesia)
+    case $2 in
+      transaction_commits)
+        sleep 1.14
+        echo 272
+        ;;
+      transaction_failures)
+        sleep 1.11
+        echo 2
+        ;;
+      transaction_log_writes)
+        sleep 1.26
+        echo 0
+        ;;
+    esac
+    ;;
+  outgoing_s2s_number)
+    sleep 1.04
+    echo 3
+    ;;
+  stats)
+    case $2 in
+      registeredusers)
+        sleep 1.10
+        echo 7
+        ;;
+      onlineusers)
+        sleep 1.04
+        echo 3
+        ;;
+      onlineusersnode)
+        sleep 1.20
+        echo 3
+        ;;
+      uptimeseconds)
+        sleep 0.99
+        echo 98798
+        ;;
+      processes)
+        sleep 1.06
+        echo 245
+        ;;
+    esac
+    ;;
+esac

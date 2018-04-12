@@ -1,0 +1,5 @@
+# This is the defaults used to run ejabberd exporter
+# Bind on all available addresses
+ADDRESS=0.0.0.0
+PORT=9334
+RUST_LOG=ejabberd-exporter
