@@ -6,8 +6,8 @@ authors = ["Greizgh <greizgh@ephax.org>"]
 license = "MIT"
 
 [dependencies]
-actix = "0.5"
-actix-web = "0.5"
+actix = "0.6"
+actix-web = "0.6"
 clap = "2.31.2"
 env_logger = "0.5.9"
 failure = "0.1.1"
