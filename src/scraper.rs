@@ -3,7 +3,7 @@ use std::str;
 use failure::Error;
 use rayon::prelude::*;
 
-use metrics::{Metric, MetricType};
+use crate::metrics::{Metric, MetricType};
 
 pub fn get_metrics<'a>() -> Result<Vec<Metric<'a>>, Error> {
     let mut metrics: Vec<Metric> = vec![

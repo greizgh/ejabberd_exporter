@@ -11,7 +11,7 @@ mod scraper;
 
 use actix_web::{server, App, HttpRequest};
 use failure::Error;
-use scraper::get_metrics;
+use crate::scraper::get_metrics;
 
 const VERSION: Option<&'static str> = option_env!("CARGO_PKG_VERSION");
 
