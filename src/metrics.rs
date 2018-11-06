@@ -47,9 +47,9 @@ impl<'a> fmt::Display for Metric<'a> {
 
 impl fmt::Display for MetricType {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        let metric_type = match self {
-            &MetricType::Counter => "counter",
-            &MetricType::Gauge => "gauge",
+        let metric_type = match *self {
+            MetricType::Counter => "counter",
+            MetricType::Gauge => "gauge",
         };
         write!(f, "{}", metric_type)
     }

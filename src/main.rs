@@ -46,6 +46,7 @@ fn main() {
     }
 }
 
+#[cfg_attr(feature = "cargo-clippy", allow(clippy::needless_pass_by_value))]
 fn metrics(_req: HttpRequest) -> Result<String, Error> {
     let mut output = String::new();
 
